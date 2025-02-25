@@ -10,10 +10,5 @@ public class Main {
         ApplicationContext xmlContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         HelloWorld helloWorldXml = (HelloWorld) xmlContext.getBean("helloWorld");
         helloWorldXml.printMessage(); // Output: Message: Hello, World from XML!
-
-        // Load Java-based configuration
-        ApplicationContext javaContext = new AnnotationConfigApplicationContext(AppConfig.class);
-        HelloWorld helloWorldJava = javaContext.getBean(HelloWorld.class);
-        helloWorldJava.printMessage(); // Output: Message: Hello, World from Java Config!
     }
 }
